@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Print holberton school with until statement
 
-until [ $i -gt 9 ]
+until [ "$i" -gt 9 ]
 do
    echo "Holberton School"
    i=$((i + 1))
