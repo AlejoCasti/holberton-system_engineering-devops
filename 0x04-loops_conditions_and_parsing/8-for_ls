@@ -4,4 +4,4 @@
 for n in *
 do
     printf '%s\n' "$n"
-done
+done | cut -d "-" -f 2
