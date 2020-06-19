@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for n in *
+do
+    printf '%s\n' "$n"
+done

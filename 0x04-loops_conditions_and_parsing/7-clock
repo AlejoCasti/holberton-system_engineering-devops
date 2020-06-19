@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+hrs=0
+min=0
+while [ $hrs -lt 13 ]
+do
+   echo "Hour: $hrs"
+   min=1
+   while [ $min -lt 60 ]
+   do
+    echo "$min"
+    min=$((min + 1))
+   done
+   hrs=$((hrs + 1))
+done
