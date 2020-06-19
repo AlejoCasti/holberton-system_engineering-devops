@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Print holberton school with until statement
+
 i=1
 while [ $i -lt 21 ]
 do

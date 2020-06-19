@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Print holberton school with until statement
+
 for i in $( seq 100 )
 do
     if [ $((i % 3)) == 0 ]

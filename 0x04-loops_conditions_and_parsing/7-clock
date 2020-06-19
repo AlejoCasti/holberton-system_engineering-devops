@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Print holberton school with until statement
+
 hrs=0
 min=0
 while [ $hrs -lt 13 ]

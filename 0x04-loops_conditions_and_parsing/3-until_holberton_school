@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Print holberton school with until statement
+
 i=0
 until [ $i -gt 10 ]
 do
