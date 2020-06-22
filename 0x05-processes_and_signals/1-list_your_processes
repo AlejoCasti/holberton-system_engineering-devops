@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#print lsit of procces
+
+ps -aux
