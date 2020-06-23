@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Create a file and infinity loop
+han_ter(){
+    echo "To infinity and beyond"
+    rm /var/run/holbertonscript.pid
+    exit 0
+}
+han_qu(){
+    rm /var/run/holbertonscript.pid
+    exit 0
+}
+han_in(){
+    echo "Y U no love me?!"
+}
+trap han_ter TERM
+trap han_qu QUIT
+trap han_in INT
+echo $$ > /var/run/holbertonscript.pid
+while :
+do
+    echo "To infinity and beyond"
+done
+
