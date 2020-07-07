@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# manage process
+if [ $# -eq 1 ]
+then
+    h_start(){
+	./manage_my_process &
+	echo "$(pgrep -f manage_my_process)" > /tmp/my_process.pid
+	echo "manage_my_process started"
+    }
+    h_stop(){
+	echo "$(cat /tmp/my_process.pid)" | xargs kill
+	rm /tmp/my_process.pid
+	echo "manage_my_process stopped"
+    }
+    h_restart(){
+	h_stop
+	h_start
+    }
+    case $1 in
+	"start") h_start;;
+	"stop") h_stop;;
+	"restart") h_restart;;
+	*) echo "Usage: manage_my_process {start|stop|restart}"
+    esac
+else
+    echo "Usage: manage_my_process {start|stop|restart}"
+fi
