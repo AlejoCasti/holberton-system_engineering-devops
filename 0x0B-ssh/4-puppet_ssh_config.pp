@@ -7,8 +7,8 @@ file_line { 'change passwordAuthentication':
   match  => '^PasswordAuthentication'
 }
 
-file_line { 'Declare identity file':
+file_line { 'add indentityfile':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
-  line   => '    IdentityFile ~/.ssh/holberton',
+  line   => '    IdentityFile ~/.ssh/holberton'
 }
