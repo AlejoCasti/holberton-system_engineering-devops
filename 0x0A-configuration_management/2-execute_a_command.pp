@@ -1,6 +1,6 @@
 #kill a process
 
 exec { "kill_process":
-     provider => 'shell'
+     provider => 'shell',
      command  => 'pkill -9 killmenow'
 }
