@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Install NGNINX an start service
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.html
+sed 's/}/}\n\trewrite ^\/redirect_me http:\/\/www.google.com permanent/1' /etc/nginx/sites-availables/default
+service nginx start
