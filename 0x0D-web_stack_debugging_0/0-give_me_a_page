@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# get start apache
+
+/etc/init.d/apache2 start
+
+
