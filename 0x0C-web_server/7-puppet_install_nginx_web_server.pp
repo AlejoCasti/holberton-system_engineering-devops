@@ -1,15 +1,13 @@
-#!/usr/bin/env bash
 #Setting server
 
-exec { 'install nginx':
-  provider => 'shell',
-  command  => 'apt-get -y update ; apt-get -y install nginx'
+package { 'nginx':
+  ensure => installed,
+  name   => 'nginx',
 }
 
-
-exec { 'create index.html':
-  provider => 'shell',
-  command  => 'echo "Holberton School" > /var/www/html/index.html'
+file { '/var/www/html/index.html':
+  content => 'Holberton School',
+  path    => '/var/www/html/index.html'
 }
 
 exec { '301 value and start server':
