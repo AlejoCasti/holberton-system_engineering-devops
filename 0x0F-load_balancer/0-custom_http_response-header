@@ -6,5 +6,5 @@ echo "Holberton School" > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 sed -i 's/root \/var\/www\/html;/root \/var\/www\/html;\n\trewrite ^\/redirect_me http:\/\/google.com permanent;/' /etc/nginx/sites-available/default
 sed -i 's/root \/var\/www\/html;/root \/var\/www\/html;\n\terror_page 404 \/custom_404.html;/' /etc/nginx/sites-available/default
-sed -i "s/root \/var\/www\/html;/root \/var\/www\/html;\n\tadd_header X-Served-By $HOSTNAME;/" /etc/nginx/sites-available/default
+sed -i "s/root \/var\/www\/html;/root \/var\/www\/html;\n\tadd_header X-Served-By \$HOSTNAME;/" /etc/nginx/sites-available/default
 service nginx start
