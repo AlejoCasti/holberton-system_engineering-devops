@@ -1,8 +1,12 @@
 #ADD http header
 
+exec { 'update':
+  command => '/usr/bin/apt-get -y update',
+}
+
 package { 'nginx':
   ensure  => installed,
-  require => Exec['update']
+  require => Exec['update'],
 }
 
 file_line { 'add_header':
