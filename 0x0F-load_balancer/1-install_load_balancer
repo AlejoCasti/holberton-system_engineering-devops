@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Install NGNINX an start service
+apt-get update
+apt-get install haproxy=1.6.\*
+echo "
+frontend http_front
+   bind *:80
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server 1514-web-01 34.74.22.156:80 check
+   server 1514-web-02 34.74.179.134:80 check" >> /etc/haproxy/haproxy.cfg
+service haproxy start
