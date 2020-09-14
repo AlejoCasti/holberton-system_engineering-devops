@@ -18,4 +18,4 @@ if __name__ == '__main__':
     print('Employee {} is done with tasks({}/{}):'
           .format(employee['name'], len(todo), len(todo_list)))
     for i in todo:
-        print('\t{}'.format(i['title']))
+        print('\t {}'.format(i['title']))
