@@ -18,7 +18,7 @@ if __name__ == '__main__':
     todo = [i for i in todo_list if i['completed']]
 
     with open('{}.csv'.format(argv[1]), 'w') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for row in todo_list:
             writer.writerow([argv[1], employee['name'],
                              row['completed'], row['title']])
