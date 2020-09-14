@@ -4,9 +4,9 @@
 
 if __name__ == '__main__':
     ''' get conection to API '''
-    from sys import argv
     import json
     import requests
+    from sys import argv
 
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'
                      .format(argv[1]))
